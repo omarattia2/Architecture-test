@@ -34,7 +34,7 @@ export default function CinematicSlide({
       clipPath: "inset(0% 0% 0% 0%)",
       transition: {
         duration: 1.2,
-        ease: [0.25, 0.1, 0.25, 1],
+        ease: [0.25, 0.1, 0.25, 1] as const,
       },
     },
     exit: (dir: "forward" | "backward" | null) => {
@@ -43,7 +43,7 @@ export default function CinematicSlide({
           clipPath: "inset(0% 100% 0% 0%)",
           transition: {
             duration: 1.2,
-            ease: [0.25, 0.1, 0.25, 1],
+            ease: [0.25, 0.1, 0.25, 1] as const,
           },
         };
       } else if (dir === "backward") {
@@ -51,7 +51,7 @@ export default function CinematicSlide({
           clipPath: "inset(0% 0% 0% 100%)",
           transition: {
             duration: 1.2,
-            ease: [0.25, 0.1, 0.25, 1],
+            ease: [0.25, 0.1, 0.25, 1] as const,
           },
         };
       }
@@ -59,7 +59,7 @@ export default function CinematicSlide({
         opacity: 0,
         transition: {
           duration: 0.8,
-          ease: [0.25, 0.1, 0.25, 1],
+          ease: [0.25, 0.1, 0.25, 1] as const,
         },
       };
     },
@@ -76,7 +76,7 @@ export default function CinematicSlide({
       opacity: 1,
       transition: {
         duration: 1.4,
-        ease: [0.25, 0.1, 0.25, 1],
+        ease: [0.25, 0.1, 0.25, 1] as const,
       },
     },
     exit: {
@@ -84,7 +84,7 @@ export default function CinematicSlide({
       opacity: 0,
       transition: {
         duration: 1.2,
-        ease: [0.25, 0.1, 0.25, 1],
+        ease: [0.25, 0.1, 0.25, 1] as const,
       },
     },
   };

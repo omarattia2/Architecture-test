@@ -19,8 +19,10 @@ export default function SmoothScrollInit() {
 
     // Create a function to update ScrollTrigger on Lenis scroll
     function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+      if (lenis) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
     }
 
     requestAnimationFrame(raf);

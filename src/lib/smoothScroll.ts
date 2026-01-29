@@ -17,7 +17,7 @@ export function isTouchDevice(): boolean {
   return (
     "ontouchstart" in window ||
     navigator.maxTouchPoints > 0 ||
-    // @ts-ignore
+    // @ts-expect-error - msMaxTouchPoints is a legacy IE property
     navigator.msMaxTouchPoints > 0
   );
 }
@@ -45,7 +45,6 @@ export function initLenis(): Lenis | null {
     gestureOrientation: "vertical",
     smoothWheel: true,
     wheelMultiplier: 1,
-    smoothTouch: false, // Disable smooth touch to preserve native mobile scroll
     touchMultiplier: 2,
     infinite: false,
   });
